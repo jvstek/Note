@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="css/index.css">
-  <title>NoteTaking</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>NoteTaking</title>
 </head>
 <body>
-  <div id="NoteTaking">
-
-  </div>
-  <!-- <script src="cordova.js"></script> -->
-  <script src="js/vue.min.js"></script>
-  <script src="js/index.js"></script>
+    <div id="NoteTaking">
+        <div v-for="(note,index) in notes" class="note" v-on:click="deleteNote(index)">
+            {{note}}
+        </div>
+        <button class="btn" v-on:click="notePrompt()"> +</button>
+    </div>
+    <!-- <script src="cordova.js"></script> -->
+    <script src="js/vue.min.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
